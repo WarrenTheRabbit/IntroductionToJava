@@ -1,0 +1,43 @@
+
+13.5.5
+
+a) 
+Edible x = new Tiger(); 
+
+Expected: Will not compile because Tiger does not implement Edible.
+Actual: As expected.
+
+
+b)
+Edible x = new Chicken();
+System.out.println(x.sound());
+
+Expected: Will not compile. x is declared Edible but does not contain the sound() method.
+Actual: As expected.
+
+c)
+Edible x = new Chicken();
+System.out.println((Animal)x.sound());
+
+Expected: Will not compile. Memeber access operator has higher precedence (16) than cast (13) and so x is still declared Edible when method matching is performed.
+Actual: As expected.
+
+d)
+Edible x = new Chicken();
+System.out.println( ((Animal) x).sound());
+
+Expected: Will compile. The bracketed cast will result in type Animal being used for method matching.
+Actual: As expected.
+
+e)
+Edible x = new LittleChicken();
+System.out.println(x.howToEat());
+
+Expected: Will compile. Edible contains howToEat().
+Actual: As expected.
+
+f) 
+LittleChicken x = new Chicken();
+
+Expected: Will not compile. LittleChicken does not supertype Chicken.
+Actual: As expected.
