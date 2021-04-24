@@ -37,9 +37,6 @@ public class AnalyzeScoresFunctional {
 
     public static void analyseScores(double[] scores) {
 
-        double item;
-        Scanner inputStream = new Scanner(System.in);
-
         average = sum / count;
 
         for (int i = 0; i < count; i++) {
