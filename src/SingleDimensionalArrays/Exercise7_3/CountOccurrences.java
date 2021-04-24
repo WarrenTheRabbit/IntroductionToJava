@@ -29,7 +29,7 @@ public class CountOccurrences {
 
         do  {
 
-            // validate input to be between 1 and 20
+            // Validate input to be between 1 and 20.
             while (
                     (number = inputStream.nextInt()) < 0 ||
                     number > 20) {
@@ -37,8 +37,9 @@ public class CountOccurrences {
             }
 
             if (number != 0) {
-                // increment count for that occurrence
-                count[number-1]++;
+                // Increment the designated index that stores the
+                // count for the occurrences of number.
+                count[number - 1]++;
             }
 
         } while (number != 0);
